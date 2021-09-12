@@ -1,0 +1,13 @@
+
+spring:
+  application:
+    name: spring-cloud-config-server-embedded
+  profiles:
+    active: composite
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: ${user.home}/config-repo
+        bootstrap: true
